@@ -375,6 +375,11 @@ namespace FixMath.NET
             return new Fix64(x.m_rawValue % y.m_rawValue);
         }
 
+        public static Fix64 operator +(Fix64 x)
+        {
+            return x;
+        }
+
         public static Fix64 operator -(Fix64 x)
         {
             return x.m_rawValue == MIN_VALUE ? MaxValue : new Fix64(-x.m_rawValue);
